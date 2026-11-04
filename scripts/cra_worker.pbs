@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N cra_worker
+#PBS -q gpu
+#PBS -j oe
+#PBS -V
+cd $PBS_O_WORKDIR
+source /home/soft/anaconda3/etc/profile.d/conda.sh
+conda activate torch-gpu
+NGPUS=${NGPUS:-4}
+# PBS here does not bind GPUs: pick the GPUs with the most FREE memory (>= 40 GB),
+# so we never pile onto a GPU another user's job is already filling.
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index,memory.free --format=csv,noheader,nounits \
+  | awk -F', ' '$2 >= 40000' | sort -t',' -k2,2nr | head -"$NGPUS" | cut -d',' -f1 | tr -d ' ' | paste -sd,)
+echo "host=$(hostname) gpus=$CUDA_VISIBLE_DEVICES files=$QUEUE"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True PYTHONUNBUFFERED=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2
+python -m cra.worker $QUEUE --slots-per-gpu ${SLOTS:-2} > logs/worker_${PBS_JOBID%%.*}.log 2>&1

@@ -1,0 +1,27 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+/.claude/
+
+# large / regenerable artifacts
+/data/
+/runs/
+/checkpoints*/
+/logs/
+*.log
+/queue/
+__pycache__/
+*.pyc
+
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# manuscript and revision notes are kept out of the public repo
+/paper/
+REVISION_NOTES.md

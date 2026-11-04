@@ -1,0 +1,7 @@
+checkpoint,attack,defense,clean_acc,asr
+./checkpoints/resnet18_backdoor_badnets_defended_neural_cleanse.pt,badnets,neural_cleanse,0.8852,0.0267
+./checkpoints/resnet18_backdoor_blend_defended_neural_cleanse.pt,blend,neural_cleanse,0.8812,0.0147
+./checkpoints/resnet18_backdoor_sig_defended_neural_cleanse.pt,sig,neural_cleanse,0.8553,0.9326
+./checkpoints/resnet18_backdoor_wanet_defended_neural_cleanse.pt,wanet,neural_cleanse,0.8966,0.0149
+./checkpoints/resnet18_backdoor_dynamic_defended_neural_cleanse.pt,dynamic,neural_cleanse,0.9354,0.9999
+./checkpoints/resnet18_backdoor_trojan_defended_neural_cleanse.pt,trojan,neural_cleanse,0.8897,0.8946

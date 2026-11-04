@@ -1,0 +1,13 @@
+config,attack,clean_acc,asr
+g3_o30,badnets,0.7860,0.9999
+g3_o30,blend,0.8476,0.1412
+g3_o30,sig,0.7937,0.9738
+g3_o30,wanet,0.8002,0.0457
+g3_o30,dynamic,0.8513,0.2068
+g3_o30,trojan,0.8182,0.6757
+g1_o50,badnets,0.7264,0.9877
+g1_o50,blend,0.8838,0.0047
+g1_o50,sig,0.7571,0.9250
+g1_o50,wanet,0.8382,0.0480
+g1_o50,dynamic,0.8293,0.0622
+g1_o50,trojan,0.8002,0.6611

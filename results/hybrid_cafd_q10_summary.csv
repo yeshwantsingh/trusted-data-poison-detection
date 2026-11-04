@@ -1,0 +1,5 @@
+checkpoint,attack,defense,clean_acc,asr
+./checkpoints_cafd_q10/resnet18_backdoor_badnets_defended_hybrid.pt,badnets,hybrid_cafd_q10,0.9048,0.0366
+./checkpoints_cafd_q10/resnet18_backdoor_blend_defended_hybrid.pt,blend,hybrid_cafd_q10,0.9141,0.0028
+./checkpoints_cafd_q10/resnet18_backdoor_wanet_defended_hybrid.pt,wanet,hybrid_cafd_q10,0.9039,0.0312
+./checkpoints_cafd_q10/resnet18_backdoor_dynamic_defended_hybrid.pt,dynamic,hybrid_cafd_q10,0.8962,0.0620

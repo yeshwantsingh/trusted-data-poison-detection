@@ -1,0 +1,6 @@
+score,median_delta_auroc,wilcoxon_p,n
+strip,-0.0341,6.33e-05,27
+spectral,-0.0068,9.91e-01,27
+knn,0.6908,1.49e-08,27
+maha,0.2563,1.49e-08,27
+cafd,0.3180,4.47e-08,27

@@ -1,0 +1,7 @@
+checkpoint,attack,defense,clean_acc,asr
+./checkpoints_cluster/resnet18_backdoor_badnets_defended_hybrid.pt,badnets,hybrid_cluster,0.7590,1.0000
+./checkpoints_cluster/resnet18_backdoor_blend_defended_hybrid.pt,blend,hybrid_cluster,0.7562,0.9878
+./checkpoints_cluster/resnet18_backdoor_sig_defended_hybrid.pt,sig,hybrid_cluster,0.7416,0.9638
+./checkpoints_cluster/resnet18_backdoor_wanet_defended_hybrid.pt,wanet,hybrid_cluster,0.6696,0.3254
+./checkpoints_cluster/resnet18_backdoor_dynamic_defended_hybrid.pt,dynamic,hybrid_cluster,0.7297,1.0000
+./checkpoints_cluster/resnet18_backdoor_trojan_defended_hybrid.pt,trojan,hybrid_cluster,0.8269,0.0092
